@@ -1,0 +1,33 @@
+{
+    "env": {
+      "browser": true,
+      "es6": true,
+      "node": true
+    },
+    "extends": [
+      "tenatek",
+      "plugin:import/errors",
+      "plugin:import/warnings",
+      "plugin:import/typescript"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "sourceType": "module"
+    },
+    "plugins": ["@typescript-eslint", "import"],
+    "rules": {
+      "@typescript-eslint/no-unused-vars": "error",
+      "class-methods-use-this": "off",
+      "import/order": [
+        "error",
+        {
+          "alphabetize": {
+            "order": "asc"
+          }
+        }
+      ],
+      "no-unused-vars": "off",
+      "no-useless-constructor": "off"
+    }
+  }
+  
