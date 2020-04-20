@@ -13,6 +13,11 @@ const routes: Routes = [
     // eslint-disable-next-line arrow-body-style
     loadChildren: ()=>import('./admin/admin.module').then(m=>m.AdminModule),
     path:'admin'
+  },
+  {
+    // eslint-disable-next-line arrow-body-style
+    loadChildren: ()=>import('./client/client.module').then(m=>m.ClientModule),
+    path:'client'
   }
 ];
 
