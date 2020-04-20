@@ -1,25 +1,27 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
 
 const routes: Routes = [
   {
     // eslint-disable-next-line arrow-body-style
-    loadChildren: ()=>import('./admin/admin.module').then(m => m.AdminModule),
-    path:'admin'
+    component: LoginComponent,
+    path:'login'
   },
   {
     // eslint-disable-next-line arrow-body-style
-    loadChildren: ()=>import('./client/client.module').then(m => m.ClientModule),
-    path:'client'
+    component: SignupComponent,
+    path:'signup'
   }
 ];
 
 @NgModule({
-  declarations: [],
+  declarations: [LoginComponent, SignupComponent],
   imports: [
     CommonModule,
     RouterModule.forChild(routes)
   ]
 })
-export class AnonymousModule { }
+export class ClientModule { }
